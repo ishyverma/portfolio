@@ -42,14 +42,16 @@ const ProjectCard = ({
   },
 }: Props) => {
   return (
-    <Card className="relative flex flex-col justify-between h-full bg-inherit overflow-hidden 
-                    group transition-all duration-300 hover:shadow-md hover:border-primary/20
-                    before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-primary/5 before:to-transparent
-                    before:translate-x-[-100%] before:animate-none hover:before:animate-flow">
+    <Card
+      className="relative flex flex-col justify-between h-full bg-inherit overflow-hidden 
+        group transition-all duration-300 hover:shadow-md hover:border-primary/20
+        before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-primary/5 before:to-transparent
+        before:translate-x-[-100%] before:animate-none hover:before:animate-flow"
+    >
       <div>
         <CardHeader className="overflow-hidden rounded-lg">
           {image && (
-            <div className="relative w-full h-48 overflow-hidden">
+            <div className="relative w-full h-48 overflow-hidden rounded-md">
               <Image
                 src={image}
                 alt={title}
@@ -71,7 +73,9 @@ const ProjectCard = ({
             </div>
           )}
           <div>
-            <CardTitle className="mt-2 group-hover:text-primary transition-colors duration-300">{title}</CardTitle>
+            <CardTitle className="mt-2 group-hover:text-primary transition-colors duration-300">
+              {title}
+            </CardTitle>
             <p className="text-xs text-muted-foreground mt-2">{date}</p>
             <CardDescription className="text-xs font-medium mt-2">
               {description}
@@ -82,8 +86,8 @@ const ProjectCard = ({
           <div className="flex flex-col gap-2">
             <div className="flex flex-wrap gap-2 mt-2">
               {technologies.map((technology) => (
-                <Badge 
-                  variant="secondary" 
+                <Badge
+                  variant="secondary"
                   key={technology}
                   className="transition-all duration-300 hover:bg-primary/20"
                 >
@@ -97,7 +101,12 @@ const ProjectCard = ({
       <CardFooter className="pt-4">
         <div className="flex flex-row items-center justify-start gap-2 w-full">
           {website && (
-            <Button variant="secondary" size="sm" asChild className="transition-all duration-300 hover:bg-primary/10 hover:text-primary">
+            <Button
+              variant="secondary"
+              size="sm"
+              asChild
+              className="transition-all duration-300 hover:bg-primary/10 hover:text-primary"
+            >
               <Link target="_blank" href={website}>
                 <Globe className="w-4 h-4 mr-1" />
                 Website
@@ -105,7 +114,12 @@ const ProjectCard = ({
             </Button>
           )}
           {codeLink && (
-            <Button variant="secondary" size="sm" asChild className="transition-all duration-300 hover:bg-primary/10 hover:text-primary">
+            <Button
+              variant="secondary"
+              size="sm"
+              asChild
+              className="transition-all duration-300 hover:bg-primary/10 hover:text-primary"
+            >
               <Link target="_blank" href={codeLink}>
                 <Code className="w-4 h-4 mr-1" />
                 Code
@@ -113,7 +127,12 @@ const ProjectCard = ({
             </Button>
           )}
           {videoDemo && (
-            <Button variant="secondary" size="sm" asChild className="transition-all duration-300 hover:bg-primary/10 hover:text-primary">
+            <Button
+              variant="secondary"
+              size="sm"
+              asChild
+              className="transition-all duration-300 hover:bg-primary/10 hover:text-primary"
+            >
               <Link target="_blank" href={videoDemo}>
                 <Video className="w-4 h-4 mr-1" />
                 Demo
