@@ -12,15 +12,17 @@ type Props = {
 const EducationCard = ({ picture, name, time, studied, description }: Props) => {
   return (
     <Card>
-        <CardHeader className='flex gap-5 items-center'>
-            <div>
-                <Image src={picture} alt={name} width={picture.includes('https://www.lfpsdelhi.com/images/logo.png') ? 50 : 30} height={30} />
+        <CardHeader className='md:flex gap-5 items-center'>
+            <div className='flex gap-5 items-center'>
+                <div>
+                    <Image src={picture} alt={name} width={picture.includes('https://www.lfpsdelhi.com/images/logo.png') ? 50 : 30} height={30} />
+                </div>
+                <div>
+                    <p className='md:text-xl text-base font-bold'>{name}</p>
+                    <p className='text-sm text-muted-foreground'>{studied}</p>
+                </div>
             </div>
-            <div>
-                <p className='text-xl font-bold'>{name}</p>
-                <p className='text-sm text-muted-foreground'>{studied}</p>
-            </div>
-            <div className='self-start mt-1'>
+            <div className='self-start mt-1 flex'>
                 <p className='text-sm text-muted-foreground bg-muted px-2 py-1 rounded-md'>{time}</p>
             </div>
         </CardHeader>

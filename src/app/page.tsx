@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useTheme } from "next-themes";
+
 import { Button } from "@/components/ui/button";
 import AllBadges from "@/components/ui/all-badges";
 import AllProjects from "@/components/ui/all-projects";
@@ -13,14 +15,13 @@ import Github from "@/components/svg/github";
 import Twitter from "@/components/svg/twitter";
 import { Separator } from "@/components/ui/separator";
 import { Moon } from "lucide-react";
-import { useTheme } from "next-themes";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
 
   return (
     <div className="overflow-hidden">
-      <div className="max-w-3xl mx-auto py-10 font-bricolage relative">
+      <div className="max-w-3xl px-4 mx-auto py-10 font-bricolage relative">
         <Spotlight />
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-10 md:justify-between">
           <div className="md:flex-1">
@@ -34,8 +35,8 @@ export default function Home() {
             <p className="mt-6 text-muted-foreground max-w-md text-md font-medium text-center md:text-left">
               Seasoned Fullstack Engineer with 1 year of experience in building
               web apps. I&apos;m confident in taking projects from scratch to
-              production. Skilled in both frontend and backend, with a small knack
-              for deployment.
+              production. Skilled in both frontend and backend, with a small
+              knack for deployment.
             </p>
           </div>
           <div className="relative flex-none">
@@ -63,8 +64,8 @@ export default function Home() {
           </Button>
           <h1 className="text-5xl font-semibold">Check out my latest work</h1>
           <h3 className="text-muted-foreground text-center text-lg font-medium">
-            I&apos;ve worked on a variety of projects, from simple websites to complex
-            web applications. Here are a few of my favorites.
+            I&apos;ve worked on a variety of projects, from simple websites to
+            complex web applications. Here are a few of my favorites.
           </h3>
           <AllProjects />
         </div>
@@ -92,13 +93,25 @@ export default function Home() {
         <div className="fixed bottom-10 left-[50%] translate-x-[-50%] w-70 h-10 z-10">
           <Card className="w-70 h-14 flex items-center justify-center bg-transparent backdrop-blur-sm border">
             <CardContent className="flex items-center justify-center gap-3">
-              <Link href="https://www.linkedin.com/in/ishyverma/" target="_blank" className="dark:hover:bg-[#262626] hover:bg-[#F4F4F5] p-2 rounded-md cursor-pointer">
+              <Link
+                href="https://www.linkedin.com/in/ishyverma/"
+                target="_blank"
+                className="dark:hover:bg-[#262626] hover:bg-[#F4F4F5] p-2 rounded-md cursor-pointer"
+              >
                 <LinkedIn />
               </Link>
-              <Link href="https://github.com/ishyverma" target="_blank" className="dark:hover:bg-[#262626] hover:bg-[#F4F4F5] p-2 rounded-md cursor-pointer">
-                <Github />  
+              <Link
+                href="https://github.com/ishyverma"
+                target="_blank"
+                className="dark:hover:bg-[#262626] hover:bg-[#F4F4F5] p-2 rounded-md cursor-pointer"
+              >
+                <Github />
               </Link>
-              <Link href="https://x.com/ishyverma" target="_blank" className="dark:hover:bg-[#262626] hover:bg-[#F4F4F5] p-2 rounded-md cursor-pointer">
+              <Link
+                href="https://x.com/ishyverma"
+                target="_blank"
+                className="dark:hover:bg-[#262626] hover:bg-[#F4F4F5] p-2 rounded-md cursor-pointer"
+              >
                 <Twitter />
               </Link>
               <Separator orientation="vertical" />
