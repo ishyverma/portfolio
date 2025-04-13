@@ -19,8 +19,6 @@ export const Meteors = ({
       transition={{ duration: 0.5 }}
     >
       {meteors.map((el, idx) => {
-        const meteorCount = number || 20;
-        // Calculate position using viewport width
         const viewportWidth = typeof window !== 'undefined' ? window.innerWidth : 1200;
         const position = Math.random() * viewportWidth;
 
