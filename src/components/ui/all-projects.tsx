@@ -40,7 +40,7 @@ const projects = [
     codeLink: "https://github.com/ishyverma/savvy.ai",
     video: "/Savvy.mp4",
     date: "Mar 2025",
-    website: "https://savvy-ai-one.vercel.app/",
+    website: "https://savvy-ai.vercel.app/",
   },
   {
     title: "Git Brief - Summarizing GitHub Repos Instantly",
