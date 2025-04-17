@@ -61,11 +61,11 @@
 }
 
 body {
-  font-family: var(--font-sans), 'Bricolage Grotesque', 'Boldonse', Arial, Helvetica, sans-serif;
+  font-family: inherit;
 }
 
 .font-bricolage {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: var(--font-bricolage), sans-serif;
 }
 
 :root {
