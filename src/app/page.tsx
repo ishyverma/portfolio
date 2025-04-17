@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
-      <div className="max-w-3xl px-4 mx-auto py-10 font-bricolage relative">
+      <div className="max-w-3xl px-4 mx-auto py-10 relative">
         <Spotlight />
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-10 md:justify-between">
           <div className="md:flex-1">
